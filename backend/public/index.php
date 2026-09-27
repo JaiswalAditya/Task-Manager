@@ -15,11 +15,18 @@ try {
 
     $connection = $database->getConnection();
 
+    $statement = $connection->query('SELECT COUNT(*) AS total FROM roles');
+
+    $result = $statement->fetch();
+
     echo json_encode([
         'success' => true,
-        'message' => 'API and database connection successful'
+        'message' => 'Database connection successful',
+        'roles_count' => (int) $result['total']
     ]);
+
 } catch (Throwable $e) {
+
     http_response_code(500);
 
     echo json_encode([
