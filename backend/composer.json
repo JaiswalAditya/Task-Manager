@@ -1,0 +1,24 @@
+{
+    "name": "task-manager/backend",
+    "description": "PHP REST API for Task Manager",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "TaskManager\\Backend\\": "src/",
+            "App\\": ""
+        }
+    },
+    "authors": [
+        {
+            "name": "Aditya Jaiswal"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "firebase/php-jwt": "^7.2",
+        "vlucas/phpdotenv": "^5.7",
+        "ext-pdo": "*",
+        "ext-json": "*"
+    }
+}
